@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+  <bean id="java" class="service.Java"/>
+  <bean id="sb" class="service.SpringBoot"/>
+  <bean id="telusko" class="main.Telusko">
+  	 <property ref="java" name="course"></property>
+  <!--	<constructor-arg ref="java" name="course"></constructor-arg>-->
+  </bean>
+
+
+
+    <!--Experimenting - the order of beans getting created
+    <bean id="java" class="service.Java"/>
+    <bean id="sb" class="service.SpringBoot"/>
+    <bean id="telusko" class="main.Telusko">
+
+        <constructor-arg ref="javaa" name="course"></constructor-arg>
+    </bean>  -->
+
+
+
+<!-- Experimenting - the order of beans getting created
+    <bean id="sb" class="service.SpringBoot"/>
+    <bean id="java" class="service.Java"/>
+    <bean id="telusko" class="main.Telusko">
+
+        <constructor-arg ref="java" name="course"></constructor-arg>
+    </bean>  -->
+
+
+
+
+    <!-- Experimenting - the order of beans getting created
+        <bean id="telusko" class="main.Telusko">
+
+            <constructor-arg ref="java" name="course"></constructor-arg>
+        </bean>
+        <bean id="sb" class="service.SpringBoot"/>
+        <bean id="java" class="service.Java"/>  -->
+
+
+
+    <!-- Experimenting - the order of beans getting created
+        <bean id="telusko" class="main.Telusko">
+            <property ref="java" name="course"></property>
+        </bean>
+        <bean id="java" class="service.Java"/>
+        <bean id="sb" class="service.SpringBoot"/> -->
+
+
+<!--Experimenting- multiple beans of same class is not allowed
+    <bean id="java" class="service.Java"/>
+    <bean id="java" class="service.Java"/>
+    <bean id="sb" class="service.SpringBoot"/>
+    <bean id="telusko" class="main.Telusko">
+        <property ref="java" name="course"></property>
+
+    </bean> -->
+
+    <!--Experimenting-.CannotLoadBeanClassException: Cannot find class [service.Javaa] for bean with name 'java' defined in class path resource [applicationconfig.xml]
+        <bean id="java" class="service.Javaa"/>
+        <bean id="sb" class="service.SpringBoot"/>
+        <bean id="telusko" class="main.Telusko">
+            <property ref="java" name="course"></property>
+
+    </bean>-->
+        </beans>
