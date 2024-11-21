@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+
+ <bean id="java" class="service.Java"/>
+  <bean id="sb" class="service.SpringBoot" primary="true"/>
+  <bean id="crio" class="main.Crio" autowire="byType"/>
+
+ <!--   <bean id="java" class="service.Java" />
+  <bean id="sb" class="service.SpringBoot" autowire-candidate="false"/>
+  <bean id="crio" class="main.Crio" autowire="constructor"/> -->
+
+   <!--<bean id="java" class="service.Java"/>
+  <bean id="course" class="service.SpringBoot"/>
+  <bean id="crio" class="main.Crio" autowire="byName"/> -->
+  
+ <!--  <bean id="java" class="service.Java"/>
+  <bean id="sb" class="service.SpringBoot"/>
+
+  <bean id="crio" class="main.Crio" autowire="no">
+  <property ref="java" name="course"></property>
+  </bean> -->
+
+
+
+
+<!-- Experimenting =>autowire="byType"-->
+  <!--<bean id="java" class="service.Java"  />
+  <bean id="sb" class="service.SpringBoot" autowire-candidate="false"/>
+  <bean id="crio" class="main.Crio" autowire="byType"/> -->
+
+<!--  <bean id="java" class="service.Java" autowire-candidate="false"/>
+  <bean id="sb" class="service.SpringBoot" autowire-candidate="true"/>
+  <bean id="crio" class="main.Crio" autowire="byType"/> -->
+
+ <!-- <bean id="java" class="service.Java"  />
+  <bean id="course" class="service.SpringBoot" />
+  <bean id="crio" class="main.Crio" autowire="byType"/> -->
+
+
+  <!-- Experimenting =>autowire="byName"-->
+ <!-- <bean id="java" class="service.Java"  />
+  <bean id="sb" class="service.SpringBoot" />
+  <bean id="crio" class="main.Crio" autowire="byName"/> -->
+
+ <!-- <bean id="java" class="service.Java"  />
+  <bean id="course" class="service.SpringBoot" autowire-candidate="false"/>
+  <bean id="crio" class="main.Crio" autowire="byName"/> -->
+
+ <!-- <bean id="java" class="service.Java"   />
+  <bean id="course" class="service.SpringBoot" primary="false"/>
+  <bean id="crio" class="main.Crio" autowire="byName"/> -->
+
+ <!-- <bean id="java" class="service.Java"  autowire-candidate="false"  />
+  <bean id="course" class="service.SpringBoot" primary="false"/>
+  <bean id="crio" class="main.Crio" autowire="byName"/> -->
+
+
+  <!-- Experimenting =>autowire="constructor"-->
+  <!--<bean id="java" class="service.Java"  primary="false"/>
+  <bean id="sb" class="service.SpringBoot" />
+  <bean id="crio" class="main.Crio" autowire="constructor"/> -->
+
+ <!-- <bean id="java" class="service.Java"  primary="true"/>
+  <bean id="sb" class="service.SpringBoot" />
+  <bean id="crio" class="main.Crio" autowire="constructor"/>-->
+</beans>
